@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script>
+  // This kills any old React/Vite service workers that might be hijacking the page
+  navigator.serviceWorker.getRegistrations().then(function(registrations) {
+    for(let registration of registrations) {
+      registration.unregister();
+      console.log('Old Service Worker unregistered');
+    }
+    });
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Caça ao Tesouro AR</title>
