@@ -50,6 +50,12 @@
   }
 }
 
+video {
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
+
 #root {
   width: 1126px;
   max-width: 100%;
@@ -63,6 +69,7 @@
 }
 
 body {
+  background-color: transparent !important;
   margin: 0;
 }
 
