@@ -2,6 +2,21 @@ const marker = document.querySelector('#hiro-marker');
 const quizCard = document.querySelector('#quiz-card');
 const questionText = document.querySelector('#question-text');
 
+window.addEventListener('load', () => {
+    const scene = document.querySelector('a-scene');
+    scene.addEventListener('loaded', () => {
+        console.log("A-Frame Scene Loaded");
+        // Check if the video element was created
+        const video = document.querySelector('#arjs-video');
+        if (video) {
+            video.style.position = 'fixed';
+            video.style.top = '0';
+            video.style.left = '0';
+            video.style.zIndex = '-1';
+        }
+    });
+});
+
 // Your data (previously treasureData.ts)
 const treasures = [
     { id: 1, question: "Quem descobriu o Brasil?", answer: "Pedro Alvares Cabral" }
