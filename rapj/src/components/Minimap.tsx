@@ -30,8 +30,8 @@ export function Minimap({ lat, lng, accuracy }: Props) {
       position: 'fixed',
       bottom: '16px',
       left: '16px',
-      width: '180px',
-      height: '180px',
+      width: '360px',
+      height: '360px',
       borderRadius: '50%',          // ← game-style circular minimap
       overflow: 'hidden',
       border: '3px solid rgba(255,255,255,0.85)',
